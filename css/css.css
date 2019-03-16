@@ -1,0 +1,66 @@
+.row{
+    border: 1px solid black;
+}
+body{
+background-color:#FFFFFF;
+}
+.section-about{
+    background-color: aqua;
+}
+.about{
+ text-align: center; 
+ padding-top: 15px;
+ width: 70%;
+ margin: auto;
+}
+.about hr{
+    width: 10%;
+}
+
+/* -- INTRO */
+.container-intro{
+    padding-top: 20px;
+}
+
+.container-intro img{
+/* position: absolute; */
+}
+
+/* -- AGUA*/
+.section-agua{
+    height: 100vh;
+    width: 100%;
+}
+.container-agua{
+    height: 100vh;
+    width: 100%;
+}
+.container-agua img{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+/* -- OFRECEMOS */
+.ofrecemos{
+    padding-top: 25px;
+}
+
+/* -- */
+.section-nadando{
+    height: 100vh;
+    width: 100%;
+}
+.container-nadando{
+    height: 100vh;
+    width: 100%;
+}
+.container-nadando img{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 72%);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 72%);
+}
