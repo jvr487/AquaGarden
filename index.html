@@ -4,7 +4,7 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
@@ -67,7 +67,8 @@
         </div>
 
       </nav> -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top scrolling-navbar">
+  
+  <nav class="navbar navbar-expand-lg navbar-ligth bg-white sticky-top scrolling-navbar">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="images/logo.png" alt="Aqua Graden" width="250px" height="60px" class="d-inline-block align-top">
@@ -77,14 +78,27 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul id="link-menu-navbar" class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" data-scroll data-wow-delay="0.6s" href="#intro">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-scroll href="#">Empresa</a>
+            <a class="nav-link" data-scroll href="#ofrecemos">Ofrecemos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#construccion">Construcción</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactenos">Contactenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servicio Técnico</a>
+          </li>
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -97,58 +111,9 @@
               <a class="dropdown-item" href="#">Repuestos</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Mantenimiento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Construcción</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Servicio Técnico</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Noticias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
+
         </ul>
       </div>
-      <!-- <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div> -->
     </div>
   </nav>
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
@@ -177,26 +142,8 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <!-- <section class="section-about">
-    <div class="about">
-      <div class="row">
-        <div class="col-12">
-          <h3>Acerca de</h3>
-          <hr>
-          <p class="text-sm-left text-md-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque illum
-            sequi obcaecati corrupti laborum ab, quae natus nihil harum, et, incidunt quam culpa soluta veniam ea quod
-            perspiciatis veritatis. Veniam?</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-7">Foto</div>
-        <div class="col-12 col-md-5">
-          Descripciones
-        </div>
-      </div>
-    </div>
-
-  </section> -->
+  
+<!-- Sección intro -->
   <section class="section-intro" id="intro">
     <div class="container container-intro">
       <div class="row">
@@ -213,17 +160,23 @@
             repellendus provident voluptatibus illum?</p>
         </div>
         <div class="col-sm-12 col-md-6">
-          <img src="images/saltando.png" alt="Saltando a la piscina" class="img-fluid wow fadeInUp">
+          <img src="images/saltando.png" alt="Saltando a la piscina" class="img-fluid wow fadeInUp" data-wow-delay="0.5s">
         </div>
       </div>
     </div>
   </section>
-  <section class="section-agua">
+<!-- Sección intro -->
+
+<!-- Sección agua -->
+  <section class="section-agua" id="agua">
     <div class="container-agua">
       <img src="images/lee-jeffs-317648-unsplash.jpg" alt="piscina" class="img-fluid">
     </div>
   </section>
-  <section class="ofrecemos">
+<!-- Sección agua -->
+
+<!-- Sección ofrecemos -->
+  <section class="ofrecemos" id="ofrecemos">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -295,15 +248,22 @@
       </div>
     </div>
   </section>
-  <section class="section-nadando">
+<!-- Sección ofrecemos -->
+
+<!-- Sección nadando -->
+  <section class="section-nadando" id="nadando">
     <div class="container-nadando">
       <img src="images/relax2.jpg" alt="relax">
     </div>
   </section>
+<!-- Sección nadando -->
 
+<!-- Sección -->
   <section></section>
+<!-- Sección -->
 
-  <section class="section-contruccion">
+<!-- Sección construcción -->
+  <section class="section-contruccion" id="construccion"
     <div class="container-constuccion">
       <div class="row">
         <div class="col-sm-12 col-md-6">
@@ -337,23 +297,6 @@
             praesentium nemo.</p>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="container-contruccion-imagen-1">
-            <img src="" alt="">imagen
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4">
-          <div class="container-contruccion-imagen-2">
-            <img src="" alt="">imagen
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4">
-          <div class="container-contruccion-imagen-3">
-            <img src="" alt="">imagen
-          </div>
-        </div>
-      </div> -->
       <div id="carouselIndicator" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselIndicator" data-slide-to="0" class="active"></li>
@@ -382,7 +325,10 @@
       </div>
     </div>
   </section>
-  <section class="section-trabajamos-con">
+<!-- Sección construcción -->
+
+<!-- Sección trabajamos con -->
+  <section class="section-trabajamos-con" id="trabajamos-con">
     <div class="container-trabajamos-con">
       <div class="row text-center">
         <div class="col-sm-12">
@@ -426,7 +372,10 @@
       </div>
     </div>
   </section>
-  <section class="section-conatactenos">
+<!-- Sección trabajamos con -->
+
+<!-- Sección contactenos -->
+  <section class="section-contactenos" id="contactenos">
     <div class="container-contactenos">
       <div class="row">
         <div class="col-md-6">
@@ -475,8 +424,10 @@
       </div>
     </div>
   </section>
-  <!-- Footer -->
-<footer class="page-footer font-small blue-grey lighten-5">
+<!-- Sección contactenos -->
+
+<!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5">
 
     <div style="background-color: #21d192;">
       <div class="container">
@@ -616,7 +567,8 @@
     <!-- Copyright -->
 
   </footer>
-  <!-- Footer -->
+ <!-- Footer -->
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
