@@ -16,7 +16,8 @@ a{
     color: black;
 }
 .section-intro .section-agua, .ofrecemos, .section-nadando, 
-.section-contruccion, .section-trabajamos-con, .section-contactenos{
+.section-contruccion, .section-trabajamos-con, .section-contactenos,
+footer{
     padding-top: 30px;
 }
 
