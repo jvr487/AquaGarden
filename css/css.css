@@ -120,3 +120,8 @@ footer{
 .logos-trabajamos{
     height: 30vh;;
 }
+
+/* -- FOOTER */
+.footer-middle{
+    background-color: hsl(194, 58%, 70%);
+}
