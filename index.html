@@ -21,7 +21,8 @@
 
 <body>
 <!-- NavBar scrolling-navbar-->
-  <nav class="navbar navbar-expand-lg navbar-ligth bg-white sticky-top ">
+<section id="navbar"></section>
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-ligth bg-white sticky-top z-depth-1-half">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="images/logo.png" alt="Aqua Graden" width="250px" height="60px" class="d-inline-block align-top">
@@ -37,19 +38,19 @@
 
         <ul id="link-menu-navbar" class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" data-scroll data-wow-delay="0.6s" href="#intro">Inicio</a>
+            <a class="nav-link" data-scroll data-wow-delay="0.6s" href="#navbar">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-scroll href="#ofrecemos">Ofrecemos</a>
+            <a class="nav-link" data-scroll href="#intro">Acerda de</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#construccion">Construcción</a>
+            <a class="nav-link" href="#ofrecemos">Servicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#construccion">Contrucción</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contactenos">Contactenos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Servicio Técnico</a>
           </li>
           
           <li class="nav-item dropdown">
@@ -74,21 +75,45 @@
 <!-- Carrusell -->
 
 <header>
-  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active carousel-background-1">
+      <div class="carousel-item carousel-header active carousel-background-1">
+          <!--Caption-->
+        <div class="carousel-caption">
+          <div class="animated fadeInDown">
+            <h3 class="h3-responsive">Lorem, ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
+        </div>
+        <!--Caption-->
         <!-- <img src="images/carrusel-piscina.png" class="d-block w-100 img-fluid" alt="..."> -->
       </div>
-      <div class="carousel-item carousel-background-2" >
+      <div class="carousel-item carousel-header carousel-background-2" >
         <!-- <img src="images/bar2.jpeg" class="d-block w-100 img-fluid" alt="..."> -->
+        <!--Caption-->
+        <div class="carousel-caption">
+          <div class="animated fadeInDown">
+            <h3 class="h3-responsive">Lorem, ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
+        </div>
+        <!--Caption-->
       </div>
-      <div class="carousel-item carousel-background-3" >
+      <div class="carousel-item carousel-header carousel-background-3" >
         <!-- <img src="images/bar3.jpeg" class="d-block w-100 img-fluid"  alt="..."> -->
+        <!--Caption-->
+        <div class="carousel-caption">
+          <div class="animated fadeInDown">
+            <h3 class="h3-responsive">Lorem, ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
+        </div>
+        <!--Caption-->
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -104,11 +129,45 @@
 </header>
 <!-- Carrusell -->
   
+<!-- About 
+      ================================================== -->
+    <section class="section-intro" id="intro">
+      <div id="about-section">
+        <div class="container">
+          <div class="title-section animated fadeInUp in" data-animation="fadeInUp" data-delay="0">
+            <h3 class="title h1 my-4 text-center">About us</h3>
+            <hr>
+            <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quaerat aut, officiis ut ducimus nulla accusamus quae itaque tenetur vel?</p>
+          </div> <!-- end title-section -->
+
+          <div class="about-us">
+            <div class="row">
+              
+              <div class="col-md-7">
+                <div class="about-img animated fadeInLeft in" data-animation="fadeInLeft" data-delay="0">
+                  <img src="images/relajate.jpg" alt="momentos" height="100%" width="100%">
+                </div> <!-- end about-img -->
+              </div> <!-- end col-md-7 -->
+
+              <div class="col-md-5">
+                <div class="about-text animated fadeInRight in" data-animation="fadeInRight" data-delay="0">
+                  <h1>Lorem ipsum dolor sit.</h1>
+                  <p>Lorem ipsum dolor amet, consectetur adipiscing elit. Pellentesque ut lacus at velit consequat sodales. Ut posuere neque in molestie gravida. Integer neque lementum posuere purus. Nam convallis ipsum. Maecenas a vulputate ipsum. </p>
+                  
+                </div> <!-- end about-text -->
+              </div> <!-- end col-md-5 -->
+            </div> <!-- end row -->
+          </div> <!-- end about-us -->
+        </div> <!-- end container -->
+      </div>
+    </section>
+<!-- end about section -->  
+
 <!-- Sección intro -->
-  <section class="section-intro" id="intro">
+  <!-- <section class="section-intro" id="intro">
     <div class="container container-intro">
       <div class="row">
-        <div class="col text-center">
+        <div class="col text-center wow fadeIn">
           <h3 class="display-4">Lorem ipsum dolor</h3>
         </div>
       </div>
@@ -125,19 +184,20 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 <!-- Sección intro -->
 
 <!-- Sección agua -->
   <section class="section-agua" id="agua">
     <div class="container-agua">
-      <img src="images/lee-jeffs-317648-unsplash.jpg" alt="piscina" class="img-fluid">
+      <!-- <img src="images/lee-jeffs-317648-unsplash.jpg" alt="piscina" class="img-fluid"> -->
+      <h2 class="text-center white-text">Vive nuevas experiencias</h2>
     </div>
   </section>
 <!-- Sección agua -->
 
 <!-- Sección ofrecemos -->
-  <section class="ofrecemos" id="ofrecemos">
+  <section class="ofrecemos z-depth-1-half" id="ofrecemos">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -214,16 +274,21 @@
 <!-- Sección nadando -->
   <section class="section-nadando" id="nadando">
     <div class="container-nadando">
-      <img src="images/relax2.jpg" alt="relax" class="img-fluid">
+        <div class="container d-flex h-100">
+            <div class="row justify-content-center align-self-center">
+             <h2 class="white-text">Relajate!</h2>
+            </div>
+        </div>
+      <!-- <img src="images/relax2.jpg" alt="relax" class="img-fluid"> -->
     </div>
   </section>
 <!-- Sección nadando -->
 
 <!-- Sección -->
-  <section class="section-prueba">
+  <!-- <section class="section-prueba">
     <div id="parte1"></div>
     <div id="parte2"></div>
-  </section>
+  </section> -->
 <!-- Sección -->
 
 <!-- Sección construcción -->
@@ -256,38 +321,38 @@
             asperiores voluptatibus est.</p>
         </div>
       </div>
-      <div id="carouselIndicator" class="carousel slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselIndicator" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselIndicator" data-slide-to="1"></li>
-          <li data-target="#carouselIndicator" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/carrusel-piscina.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/carrusel-sauna.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/carrusel-jacuzzi.png" class="d-block w-100" alt="...">
-          </div>
+    </div>    
+    <div id="carouselIndicator" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselIndicator" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselIndicator" data-slide-to="1"></li>
+        <li data-target="#carouselIndicator" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/carrusel-piscina.png" class="d-block w-100" alt="...">
         </div>
-        <a class="carousel-control-prev" href="#carouselIndicator" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselIndicator" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="carousel-item">
+          <img src="images/carrusel-sauna.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/carrusel-jacuzzi.png" class="d-block w-100" alt="...">
+        </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselIndicator" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselIndicator" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </section>
 <!-- Sección construcción -->
 
 <!-- Sección trabajamos con -->
-  <section class="section-trabajamos-con" id="trabajamos-con">
+  <section class="section-trabajamos-con z-depth-1-half" id="trabajamos-con">
     <div class="container container-trabajamos-con">
       <div class="row text-center">
         <div class="col-sm-12">
@@ -339,36 +404,19 @@
       <div class="row">
         <div class="col-md-6">
             <div class="card-body contact text-center h-100 black-text">
-                <h3 class="my-4 pb-2">Contact information</h3>
+                <h3 class="my-4 pb-2">Información de contacto</h3>
                 <ul class="text-md-center list-unstyled ml-4">
                   <li>
-                    <p><i class="fas fa-map-marker-alt pr-2"></i>New York, 94126, USA</p>
+                    <p><i class="fas fa-map-marker-alt pr-2"></i>Lorem, ipsum dolor.</p>
                   </li>
                   <li>
-                    <p><i class="fas fa-phone pr-2"></i>+ 01 234 567 89</p>
+                    <p><i class="fas fa-phone pr-2"></i>+591 6273319</p>
                   </li>
                   <li>
-                    <p><i class="fas fa-envelope pr-2"></i>contact@example.com</p>
+                    <p><i class="fas fa-envelope pr-2"></i>contact@aquagarden.com</p>
                   </li>
                 </ul>
                 <hr class="hr-light my-4">
-                <ul class="list-inline text-center list-unstyled">
-                  <li class="list-inline-item">
-                    <a class="p-2 fa-lg tw-ic">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="p-2 fa-lg li-ic">
-                      <i class="fab fa-linkedin-in"> </i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="p-2 fa-lg ins-ic">
-                      <i class="fab fa-instagram"> </i>
-                    </a>
-                  </li>
-                </ul>
       
               </div>
         </div>
@@ -388,7 +436,7 @@
 <!-- Footer -->
   <footer class="page-footer font-small blue-grey lighten-5">
 
-    <div style="background-color: #21d192;">
+    <div style="background-color: #004070;">
       
       <div class="container">
 
@@ -397,7 +445,9 @@
 
           <!-- Grid column -->
           <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-            <h6 class="mb-0">Get connected with us on social networks!</h6>
+            <h6 class="mb-0">
+              ¡Conéctate con nosotros en nuestras redes sociales!
+            </h6>
           </div>
           <!-- Grid column -->
 
@@ -439,16 +489,15 @@
     <div class="container text-center text-md-left mt-5">
 
         <!-- Grid row -->
-        <div class="row mt-3 dark-grey-text">
+        <div class="row mt-3">
   
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
   
             <!-- Content -->
-            <h6 class="text-uppercase font-weight-bold">Company name</h6>
+            <h6 class="text-uppercase font-weight-bold">Aqua Garden</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-            <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ratione libero tenetur molestias! Perferendis, deleniti!</p>
   
           </div>
           <!-- Grid column -->
@@ -457,19 +506,16 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
   
             <!-- Links -->
-            <h6 class="text-uppercase font-weight-bold">Products</h6>
+            <h6 class="text-uppercase font-weight-bold">Productos</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
             <p>
-              <a class="dark-grey-text" href="#!">MDBootstrap</a>
+              <a class="" href="#!">Bombas</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">MDWordPress</a>
+              <a class="" href="#!">Filtros</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">BrandFlow</a>
-            </p>
-            <p>
-              <a class="dark-grey-text" href="#!">Bootstrap Angular</a>
+              <a class="" href="#!">Repuestos</a>
             </p>
   
           </div>
@@ -479,19 +525,19 @@
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
   
             <!-- Links -->
-            <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+            <h6 class="text-uppercase font-weight-bold">Consejos</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
             <p>
-              <a class="dark-grey-text" href="#!">Your Account</a>
+              <a class="" href="#!">Lorem, ipsum.</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+              <a class="" href="#!">Lorem, ipsum.</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Shipping Rates</a>
+              <a class="" href="#!">Lorem, ipsum.</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Help</a>
+              <a class="" href="#!">Lorem, ipsum.</a>
             </p>
   
           </div>
@@ -501,16 +547,20 @@
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
   
             <!-- Links -->
-            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <h6 class="text-uppercase font-weight-bold">Noticias</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
             <p>
-              <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                <a class="" href="#!">Lorem, ipsum dolor.</a>
+            </p>
             <p>
-              <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                <a class="" href="#!">Lorem, ipsum dolor.</a>
+            </p>
             <p>
-              <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                <a class="" href="#!">Lorem, ipsum dolor.</a>
+            </p>
             <p>
-              <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                <a class="" href="#!">Lorem, ipsum dolor.</a>
+            </p>
   
           </div>
           <!-- Grid column -->
@@ -523,8 +573,8 @@
     </div>
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
-      <a class="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3" style="background-color: #1A78C2">© 2019 Copyright:
+      <a class="" href="#!"> jvr487.com</a>
     </div>
     <!-- Copyright -->
 
@@ -553,15 +603,15 @@
 
 
   <script>
-    // new WOW().init();
-    wow = new WOW({
-      boxClass: 'wow', // default
-      animateClass: 'animated', // default
-      offset: 0, // default
-      mobile: true, // default
-      live: true // default
-    })
-    wow.init();
+    new WOW().init();
+    // wow = new WOW({
+    //   boxClass: 'wow', // default
+    //   animateClass: 'animated', // default
+    //   offset: 0, // default
+    //   mobile: true, // default
+    //   live: true // default
+    // })
+    // wow.init();
 
     var scroll = new SmoothScroll('a[href*="#"]', {
       offset: 84,
