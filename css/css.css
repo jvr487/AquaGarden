@@ -125,3 +125,29 @@ footer{
 .footer-middle{
     background-color: hsl(194, 58%, 70%);
 }
+.carousel-item {
+    height: 87vh;
+    min-height: 300px;
+    width: 100%;
+    /* height: 100vh;
+    min-height: 300px; */
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-clip: border-box;  */
+    /* background-attachment: fixed; */
+  }
+  .carousel-background-1{
+    background-image: url('../images/portada1.jpeg');
+  }
+  .carousel-background-2{
+    background-image: url('../images/momentos.jpg');
+  }
+  .carousel-background-3{
+    background-image: url('../images/diviertete.jpg');
+  }
