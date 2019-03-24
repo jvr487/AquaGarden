@@ -20,7 +20,7 @@ a{
     color: black;
 }
 .section-intro{
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%; 
 }
 .section-intro, .section-agua, .ofrecemos, .section-nadando, 
@@ -82,7 +82,7 @@ a{
     /* -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
     /* border-radius: 56% 76% 39% 64% / 43% 16% 60% 43% ; */
-    border-radius: 85% 80% 88% 92% / 67% 60% 100% 100% 
+    border-radius: 85% 80% 88% 92% / 67% 60% 100% 100%;
 }
 
 /* -- OFRECEMOS */
@@ -173,9 +173,6 @@ a{
     /* height: 100vh;
     min-height: 300px; */
     background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     /* background-repeat: no-repeat;
     background-size: cover;
