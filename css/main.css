@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif
+}
+#navbar{
+    position: fixed;
+    background-color:#151719;
+    width: 200px;
+    height: 100vh;
+}
+#navbar ul li{
+    padding-top: 15px;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+    padding-left: 10px;
+}
+#navbar ul li a{
+    text-decoration: none;
+}
+#navbar div {
+position: absolute;
+left: 250px;
+top: 20px;
+}
+#navbar div span{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: black;
+    margin-top: 3px;
+}
