@@ -183,6 +183,52 @@
 .carousel-inner .carousel-item div button:hover{
     background: linear-gradient(to right, #44a9cf 47%,#465fca 100%);
 }    
+/* Section Destacados*/
+.section-destacados{
+    position: relative;
+    height: 100vh;
+    background-color: #44a9cf;
+}
+#tab-destacados{
+    position: absolute;
+    width: 20%;
+    height:88%;
+    top:12%;
+    left: 0;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    background-color: rgba(53, 57, 69, 0.85);
+    border-radius: 5px;
+}
+#tab-destacados li{
+    flex-grow: 1;
+    text-align: center;
+}
+#tab-destacados li a{
+    color: white;
+}
+#tab-destacados li a.active{
+    background-color: transparent;
+}
+#tab-destacados li a .feature-spa{
+    background: url('images/featured-spa.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 40px;
+    padding: 40px 0 0 0;
+}
+#tab-content{
+height: 100vh;
+width: 100%;
+}
+#tab-content div .img{
+height: 100vh;
+width: 100%;
+background: url('images/portada1.jpeg');
+background-position: center;
+background-size: cover;
+}
+/* Section Destacados*/
 
 @keyframes water {
 	from{
@@ -296,12 +342,50 @@
       </a>
     </div>
 </header>
-<div class="middle">
-    <h1>Animation</h1>
-</div>
-<button>Lorem, ipsum dolor.</button>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus officiis accusamus recusandae magni. Excepturi facilis perspiciatis doloribus officia natus dolor aliquid sint blanditiis itaque? Natus enim quae quam, dolor labore accusantium? Dignissimos natus dicta consectetur? Esse magni quis illum consequatur dicta minima animi! Alias, maiores iste? Eos consectetur, ea fugiat quam accusantium iure rem ad odio unde exercitationem doloribus eveniet explicabo libero molestiae quis dicta odit nulla repellendus, facilis totam aut quod, dolorum possimus. Blanditiis harum quas animi voluptatum facilis, in quae enim laudantium dolores placeat fugit sunt illo fugiat ab accusantium error reiciendis ipsa autem, ducimus, natus libero eius. Facilis neque sequi itaque corporis. Iusto tempore quidem fugiat eos commodi facere aliquam, atque aspernatur illum excepturi, pariatur animi repellat vero corrupti minima. Nisi cupiditate repellendus ipsum suscipit voluptate doloribus dolorem, quaerat, perspiciatis alias, at commodi? Illum debitis explicabo similique! Pariatur quis, quas enim ipsa culpa autem impedit molestiae nobis laborum alias. Doloremque voluptate quod quia sint animi tempore doloribus dolorem id eaque, at natus, laudantium ea earum asperiores magni harum vitae alias fugiat fugit exercitationem repudiandae laboriosam. At nostrum excepturi, asperiores hic, accusantium quos quisquam nesciunt est explicabo molestias, atque reprehenderit quibusdam mollitia. Obcaecati, hic illo! Debitis unde eum rerum nulla culpa quia dolor laboriosam quos necessitatibus distinctio sunt harum, iure molestiae ipsum! Earum, ipsam eligendi laboriosam expedita neque ducimus deserunt? Eum optio a enim rerum magni nobis unde, odit atque doloremque eaque commodi esse cum voluptates accusantium hic consectetur repellendus perspiciatis? Possimus magnam magni dolore commodi voluptatum molestiae?</p>
+<section class="section-destacados">
+    
+    <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active" id="prducto1" role="tabpanel" aria-labelledby="home-tab">
+                <div class="img img-fluid">
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Food truck fixie
+                locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,
+                blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
+                Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
+                PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS
+                salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit,
+                sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+                stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Etsy mixtape
+                wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
+                lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard
+                locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify
+                squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie
+                etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog
+                stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+    </div>
 
+    <ul class="nav nav-tabs" id="tab-destacados" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#prducto1" role="tab" aria-controls="home"
+            aria-selected="true">
+                <div class="feature-spa">
+                    Home
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+            aria-selected="false">Contact</a>
+        </li>
+    </ul>
+
+</section>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
