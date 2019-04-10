@@ -122,6 +122,7 @@
         background-image: url('images/water.png'); 
         background-size: cover;  
         -webkit-background-clip:text;
+        background-clip:text;
         animation: water 15s infinite linear;
     }
     .navbar-menu-movil ul li{ 
@@ -156,9 +157,9 @@
         z-index: 150;
         transition:left 200ms linear 0ms,transform 300ms ease 100ms;
     }
-    .hamburger.active{
-        /* transform:rotate(360deg); */
-    }
+    /* .hamburger.active{
+        transform:rotate(360deg);
+    } */
     .hamburger span{
         position: relative;
         width: 25px;
@@ -276,7 +277,7 @@
 #tab-destacados li a.active{
     background-color: transparent;
 }
-#tab-destacados li a .feature-spa{
+/* #tab-destacados li a .feature-spa{ */
     /* background: url('images/featured-spa.png');
     background-repeat: no-repeat;
     background-position: top;
@@ -284,7 +285,7 @@
     /* padding: 70px 0 0 0;
     height: 70px;
     width: 91px; */
-}
+/* } */
 #tab-content{
 height: 100vh;
 width: 100%;
@@ -353,6 +354,22 @@ background-size: cover;
         padding-top: 40px;
     }
 /* section-productos */
+
+/* section-proyectos */
+.section-proyectos{
+    width: 100%;
+    height: 100vh;
+    background-color: #3498db
+}
+/* section-proyectos */
+
+/* section-clientes */
+.section-clientes{
+    width: 100%;
+    height: 100vh;
+    background-color: lightslategray;
+}
+/* section-clientes */
 
 
 @keyframes water {
@@ -578,6 +595,17 @@ background-size: cover;
     </div>
 </section>
 
+<section class="section-proyectos">
+
+</section>
+
+<section class="section-clientes">
+
+</section>
+
+<footer>
+
+</footer>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
