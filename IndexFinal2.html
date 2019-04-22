@@ -41,6 +41,7 @@
     position: relative !important;
     overflow: hidden !important;
     color: white !important;
+    display: inline-block;
     }
     .btn-agua-garden:before{
     content: "" !important;
@@ -137,7 +138,8 @@
         color: #ffffff82;
         background-image: url('images/water.png'); 
         background-size: cover;  
-        -webkit-background-clip:text;
+        background-clip: text;
+        -webkit-background-clip: text;
         animation: water 15s infinite linear;
     }
     .navbar-menu-movil ul li{ 
@@ -227,9 +229,6 @@
         z-index: 150;
         transition:left 200ms linear 0ms,transform 300ms ease 100ms;
     }
-    .hamburger.active{
-        /* transform:rotate(360deg); */
-    }
     .hamburger span{
         position: relative;
         width: 25px;
@@ -261,12 +260,27 @@
   }
   .carousel-item.carousel-header.carousel-background-1{
     background-image: url('images/portada1.jpeg');
-  }
+    }
   .carousel-item.carousel-header.carousel-background-2{
     background-image: url('images/portadacool.jpg');
   }
-  .carousel-item.carousel-header.carousel-background-3{
+  .carousel-item.carousel-header div.carousel-background-3{
     background-image: url('images/diviertete.jpg');
+    height:100vh;/*  87vh;*/
+    min-height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1) translateZ(0);
+    animation: grow 12s linear 10ms forwards;
+  }
+  @keyframes grow{
+      0%{
+        transform: scale(1)
+      }
+      100%{
+        transform: scale(1.2)
+      }
   }
   .overlay{
     position: absolute;
@@ -297,6 +311,9 @@
   }
 .carousel-inner .carousel-item .carousel-caption{
     z-index: 90;
+}    
+.carousel-inner .carousel-item .carousel-caption h3{
+    font-weight: 600;
 }    
 .carousel-inner .carousel-item div button{
     padding: 10px;
@@ -376,10 +393,11 @@ background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40vh;
-        -webkit-clip-path: polygon(100% 0, 100% 90%, 48% 100%, 55% 90%, 0 97%, 0 0);
-        clip-path: polygon(100% 0, 100% 90%, 48% 100%, 55% 90%, 0 97%, 0 0);
+        height: 30vh;
+        /* -webkit-clip-path: polygon(100% 0, 100% 90%, 48% 100%, 55% 90%, 0 97%, 0 0);
+        clip-path: polygon(100% 0, 100% 90%, 48% 100%, 55% 90%, 0 97%, 0 0); */
         background-color: rgba(0, 0, 0, 0.4);
+        /* background: url('images/bg-section.jpg') */
     }
     .section-representantes:after{
         content: '';
@@ -409,7 +427,7 @@ background-size: cover;
 
 /* section-productos */
     .section-productos{
-        height: 84vh;
+        /* height: 84vh; */
         width: 100%;
         background-color: snow;
         display: flex;
@@ -421,16 +439,15 @@ background-size: cover;
         width: 100%;
         display: flex;
         align-items: center;
+        margin-top: 70px;
         justify-content: center;
     }
     .section-productos .representantes div{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 40px;
-    }
-    .section-productos .representantes div {
         cursor: pointer;
+        padding: 40px;
     }
 /* section-productos */
 
@@ -570,7 +587,7 @@ background-size: cover;
 </section>
 
 <header>
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" data-interval="10000">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
@@ -603,7 +620,8 @@ background-size: cover;
           </div>
           <!--Caption-->
         </div>
-        <div class="carousel-item carousel-header carousel-background-3" >
+        <div class="carousel-item carousel-header" >
+            <div class="carousel-background-3"></div>
             <div class="overlay"></div>
           <!-- <img src="images/bar3.jpeg" class="d-block w-100 img-fluid"  alt="..."> -->
           <!--Caption-->
@@ -686,7 +704,7 @@ background-size: cover;
 </section>
 
 <section class="section-representantes">
-        <h2>Representantes exclusivos</h2>
+        <h2>Representantes exclusivos</h2>            
         <a class="fa fa-arrow-down nav-link" href="#section-productos" data-custom-scroll-to="about"></a>
 </section>
 
@@ -708,7 +726,7 @@ background-size: cover;
                 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 220.1 53.5" style="enable-background:new 0 0 220.1 53.5;" xml:space="preserve"
-                    preserveAspectRatio="xMinYMin meet" width="300" height="60">
+                    preserveAspectRatio="xMinYMin meet" width="250" height="60">
                     <polygon style="fill:#21386E;" points="42.3,26.5 14.3,0 14.3,19.9 21.4,13.2 21.4,26.7 21.6,26.7 29,20.1 29,33.4 21.6,26.7 
         21.4,26.7 21.4,40.1 14.3,33.4 14.3,53.5 "></polygon>
                     <path style="fill:#21386E;" d="M75.1,23.4c-0.4-8.5-10.6-8.3-10.6-8.3l-12.2-0.2v24.2h5.6v-6.8h8.4C66.3,32.4,75.5,32,75.1,23.4z
