@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+        background-color: blanchedalmond;
+            box-sizing: border-box;
+        }
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .container div:nth-child(1){
+        width: 30%;
+        height: 20%;
+        background-color: red;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container div:nth-child(2){
+        width: 30%;
+        height: 20%;
+        background-color: orange;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container div:nth-child(3){
+        width: 30%;
+        height: 20%;
+        background-color: blue;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /***********************************************************************/
+    .container2{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: aqua;
+    }
+    .container2 div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    .container2 ul{
+        position: absolute;
+        top: 50%;
+        z-index: 99999;
+        list-style: none;
+    }
+    .container2 ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    .container2 ul li ul{
+        position: relative;
+        display: none;
+        z-index: 9999999;
+    }
+    .container2 ul li:hover ul{
+        display: block;
+    }
+    #c2div1{
+        background-image: url('images/bar.jpeg');
+        background-position: center;
+        background-size: cover;
+    }
+    #c2div1 .contenido h2,
+    #c2div2 .contenido h2,
+    #c2div3 .contenido h2{
+        position: absolute;
+        top: 30%;
+        right: 25%;
+    }    
+    #c2div1 .contenido p,
+    #c2div2 .contenido p,
+    #c2div3 .contenido p{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+    }
+    #c2div2{
+        background-image: url('images/bar2.jpeg');
+        background-position: center;
+        background-size: cover;
+    }
+    #c2div3{
+        background-image: url('images/bar3.jpeg');
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <button id="btn-div1">div 1</button>
+    </div>
+    
+    <div class="container2">
+        <ul id="ul1">
+            <li><i class="fas fa-medal"></i></a> 
+                <ul id="ul2">
+                        <li><a href="#c2div1" id="spa">Spa</a></li>
+                        <li><a href="#c2div2" id="producto">Producto</a></li>
+                        <li><a href="#c2div3" id="piscina">Piscina</a></li></ul>
+            </li>
+        </ul>
+        <div id="c2div1">
+            <div class="contenido">
+                <h2>Prueba 1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi sequi, assumenda, sed porro fuga nihil, possimus enim incidunt recusandae laudantium minus exercitationem temporibus esse ipsum aliquam eum ratione sint illo!</p>
+            </div>
+        </div>
+        <div id="c2div2">
+            <div class="contenido">
+                <h2>Prueba 2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi sequi, assumenda, sed porro fuga nihil, possimus enim incidunt recusandae laudantium minus exercitationem temporibus esse ipsum aliquam eum ratione sint illo!</p></div>
+            </div>
+        <div id="c2div3">
+            <div class="contenido">
+                <h2>Prueba 3</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi sequi, assumenda, sed porro fuga nihil, possimus enim incidunt recusandae laudantium minus exercitationem temporibus esse ipsum aliquam eum ratione sint illo!</p></div>
+            </div>
+        <button id="btn-div1">div 1</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script>
+        var div1 = document.getElementById('div1'),
+            btnDiv1 = document.getElementById('btn-div1'),
+            div2 = document.getElementById('div2'),
+            div3 = document.getElementById('div3')
+
+        var tl = new TimelineMax({paused:true});
+        tl.to(div1,1,{scale:1.5})
+        .to(div2,1,{y:-50})
+        .to(div3,2,{rotation:180,delay:2})
+
+        btnDiv1.addEventListener('click',() => {
+            tl.play();
+        })
+
+        var c2div1 = document.querySelector('#c2div1'),
+            c2div1h2 = document.querySelector('#c2div1 h2'),
+            c2div1p = document.querySelector('#c2div1 p'),
+            c2div2 = document.querySelector('#c2div2'),
+            c2div3 = document.querySelector('#c2div3')
+            
+        var tl2 = new TimelineMax();
+        tl2.set(c2div1,{autoAlpha:1});
+        tl2.set(c2div2,{autoAlpha:0});
+        tl2.set(c2div3,{autoAlpha:0});
+
+        document.getElementById('spa').addEventListener('click',()=>{
+            var tl3 = new TimelineMax()
+            tl3.to(c2div1,0.4,{autoAlpha:1})
+            .to(c2div2,0.4,{autoAlpha:0},"-=0.2")
+            .to(c2div3,0.4,{autoAlpha:0},"-=0.2")
+            .from(c2div1h2,1,{x:100,autoAlpha:0})
+            .from(c2div1p,1,{x:-100,autoAlpha:0},"-=0.2")
+        });
+        
+        document.getElementById('producto').addEventListener('click',()=>{
+            var tl4 = new TimelineMax()
+            tl4.to(c2div2,0.4,{autoAlpha:1})
+            .to(c2div1,0.4,{autoAlpha:0})
+            .to(c2div3,0.4,{autoAlpha:0})
+        });
+        
+        document.getElementById('piscina').addEventListener('click',()=>{
+            var tl5 = new TimelineMax()
+            tl5.to(c2div3,0.4,{autoAlpha:1})
+            .to(c2div1,0.4,{autoAlpha:0})
+            .to(c2div2,0.4,{autoAlpha:0})
+        });
+    </script>
+</body>
+</html>
