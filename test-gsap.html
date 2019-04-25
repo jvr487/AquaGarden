@@ -89,14 +89,12 @@
         background-size: cover;
     }
     #c2div1 .contenido h2,
-    #c2div2 .contenido h2,
     #c2div3 .contenido h2{
         position: absolute;
         top: 30%;
         right: 25%;
     }    
     #c2div1 .contenido p,
-    #c2div2 .contenido p,
     #c2div3 .contenido p{
         position: absolute;
         top: 40%;
@@ -106,6 +104,15 @@
         background-image: url('images/bar2.jpeg');
         background-position: center;
         background-size: cover;
+    }
+    #c2div2 .contenido{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        width: 50%;
+    }
+    #c2div2 .contenido h2{
+        display: inline-block;
     }
     #c2div3{
         background-image: url('images/bar3.jpeg');
@@ -121,10 +128,12 @@
         <div id="div3">3</div>
         <button id="btn-div1">div 1</button>
     </div>
-    
+    <i class="fas fa-medal fa-3x"></i>
+    <i class="fas fa-star fa-3x"></i>
+    <i class="fas fa-award fa-3x"></i>
     <div class="container2">
         <ul id="ul1">
-            <li><i class="fas fa-medal"></i></a> 
+            <li><i class="fas fa-medal fa-3x"></i></a> 
                 <ul id="ul2">
                         <li><a href="#c2div1" id="spa">Spa</a></li>
                         <li><a href="#c2div2" id="producto">Producto</a></li>
@@ -133,18 +142,20 @@
         </ul>
         <div id="c2div1">
             <div class="contenido">
-                <h2>Prueba 1</h2>
+                <i id="destacado" class="fas fa-medal fa-3x"></i>
+                <h2 align="center">Prueba 1</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi sequi, assumenda, sed porro fuga nihil, possimus enim incidunt recusandae laudantium minus exercitationem temporibus esse ipsum aliquam eum ratione sint illo!</p>
             </div>
         </div>
         <div id="c2div2">
             <div class="contenido">
-                <h2>Prueba 2</h2>
+                <i id="estrella" class="fas fa-star fa-2x"></i>
+                <h2 align="center">Prueba 2</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi sequi, assumenda, sed porro fuga nihil, possimus enim incidunt recusandae laudantium minus exercitationem temporibus esse ipsum aliquam eum ratione sint illo!</p></div>
             </div>
         <div id="c2div3">
             <div class="contenido">
-                <h2>Prueba 3</h2>
+                <h2 align="center">Prueba 3</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi sequi, assumenda, sed porro fuga nihil, possimus enim incidunt recusandae laudantium minus exercitationem temporibus esse ipsum aliquam eum ratione sint illo!</p></div>
             </div>
         <button id="btn-div1">div 1</button>
@@ -165,32 +176,54 @@
         btnDiv1.addEventListener('click',() => {
             tl.play();
         })
-
+/************************************************************************************************************/
         var c2div1 = document.querySelector('#c2div1'),
             c2div1h2 = document.querySelector('#c2div1 h2'),
             c2div1p = document.querySelector('#c2div1 p'),
             c2div2 = document.querySelector('#c2div2'),
-            c2div3 = document.querySelector('#c2div3')
+            c2div3 = document.querySelector('#c2div3'),
+            iconDestacado = document.querySelector('#destacado'),
+            estrella = document.querySelector('#estrella')
             
         var tl2 = new TimelineMax();
         tl2.set(c2div1,{autoAlpha:1});
         tl2.set(c2div2,{autoAlpha:0});
         tl2.set(c2div3,{autoAlpha:0});
+        tl2.set(iconDestacado,{autoAlpha:0});
+        // tl2.set(estrella,{autoAlpha:0});
+
+        
 
         document.getElementById('spa').addEventListener('click',()=>{
+            var coordenadasH2 = c2div1h2.getBoundingClientRect();
+            var coordenadasIconDestacado = iconDestacado.getBoundingClientRect();
+            // var xCoor = coordenadasH2.x - coordenadasIconDestacado.width - coordenadasIconDestacado.x;
+            // var yCoor =coordenadasH2.y - coordenadasIconDestacado.y;
+            var xCoor = coordenadasH2.x - coordenadasIconDestacado.width;
+            var yCoor =coordenadasH2.y;
+            console.log(coordenadasH2);
+            console.log(coordenadasIconDestacado);
+            
             var tl3 = new TimelineMax()
-            tl3.to(c2div1,0.4,{autoAlpha:1})
+            tl3.set(iconDestacado,{autoAlpha:0,x:0,y:0})
+            .to(c2div1,0.4,{autoAlpha:1})
             .to(c2div2,0.4,{autoAlpha:0},"-=0.2")
             .to(c2div3,0.4,{autoAlpha:0},"-=0.2")
             .from(c2div1h2,1,{x:100,autoAlpha:0})
             .from(c2div1p,1,{x:-100,autoAlpha:0},"-=0.2")
+            // .to(iconDestacado,0.1,{autoAlpha:0,x:0,y:0})
+            .to(iconDestacado,2,{autoAlpha:1,x:xCoor,y:yCoor})
+            // .to(iconDestacado,2,{autoAlpha:1})
         });
         
         document.getElementById('producto').addEventListener('click',()=>{
             var tl4 = new TimelineMax()
-            tl4.to(c2div2,0.4,{autoAlpha:1})
+            tl4.set(iconDestacado,{autoAlpha:0})
+            // .set(estrella,{autoAlpha:0})
+            .to(c2div2,0.4,{autoAlpha:1})
             .to(c2div1,0.4,{autoAlpha:0})
             .to(c2div3,0.4,{autoAlpha:0})
+            .from(estrella,1,{autoAlpha:0,x:-20})
         });
         
         document.getElementById('piscina').addEventListener('click',()=>{
