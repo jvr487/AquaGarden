@@ -342,7 +342,7 @@
     flex-direction: column;
     margin: 15px;
     list-style: none;
-    z-index: 80;
+    z-index: 85;
 }
 .section-destacados ul li{
     margin: 15px;
@@ -368,7 +368,7 @@
 }
 .section-destacados .contenedor-bg-descatados .bg-destacados h2{
     color:white;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: bold;
 }
 .section-destacados .contenedor-bg-descatados .bg-destacados p{
@@ -394,6 +394,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 85;
 }
 
 
@@ -722,10 +723,10 @@ background-size: cover;
     </ul>
 
     <div id="contenedor-bg-descatados" class="contenedor-bg-descatados">
-        <!-- <div class="overlay"></div> -->
-        <div class="bg-destacados"><div class="contenido"><h2>Proyecto Destacado</h2><p>Lorem ipsum dolor sitedoramet.</p></div> </div>
-        <div class="bg-destacados"><div class="contenido"><h2>Producto del mes</h2><p>Lorem ipsum dolor sit amet.</p></div> </div>
-        <div class="bg-destacados"><div class="contenido"><h2>Psicina del mes</h2><p>Lorem ipsum dolor sit amet.</p></div> </div>
+        <div class="bg-destacados"><div class="contenido"><h2>Proyecto Destacado</h2><p>Lorem ipsum dolor sitedoramet.</p><a href="" class="btn-agua-garden">Ver más</a></div> </div>
+        <div class="bg-destacados"><div class="contenido"><h2>Producto del mes</h2><p>Lorem ipsum dolor sit amet.</p><a href="" class="btn-agua-garden">Ver más</a></div> </div>
+        <div class="bg-destacados"><div class="contenido"><h2>Piscina del mes</h2><p>Lorem ipsum dolor sit amet.</p><a href="" class="btn-agua-garden">Ver más</a></div> </div>
+        <div class="overlay"></div>
     </div>
 
 </section>
@@ -832,41 +833,51 @@ background-size: cover;
         bgDestacados1 = document.querySelector('.bg-destacados:nth-child(1)'),
         bgDestacados1H2 = document.querySelector('.bg-destacados:nth-child(1) h2'),
         bgDestacados1P = document.querySelector('.bg-destacados:nth-child(1) p'),
+        bgDestacados1A = document.querySelector('.bg-destacados:nth-child(1) a'),
         bgDestacados2 = document.querySelector('.bg-destacados:nth-child(2)'),
         bgDestacados2H2 = document.querySelector('.bg-destacados:nth-child(2) h2'),
         bgDestacados2P = document.querySelector('.bg-destacados:nth-child(2) p'),
+        bgDestacados2A = document.querySelector('.bg-destacados:nth-child(2) a'),
         bgDestacados3 = document.querySelector('.bg-destacados:nth-child(3)')
         bgDestacados3H2 = document.querySelector('.bg-destacados:nth-child(3) h2')
         bgDestacados3P = document.querySelector('.bg-destacados:nth-child(3) p')
+        bgDestacados3A = document.querySelector('.bg-destacados:nth-child(3) a')
 
     
 
         
+        var tlm = new TimelineMax();
+        tlm.set(bgDestacados1,{autoAlpha:1})
+        .set(bgDestacados2,{autoAlpha:0})
+        .set(bgDestacados3,{autoAlpha:0})
         
     
     iconDestacado1.addEventListener('click',()=>{
         var tlmIconDestacados1 = new TimelineMax();
         tlmIconDestacados1.to(bgDestacados1,0.5,{autoAlpha:1})
-        .to(bgDestacados2,0.3,{autoAlpha:0})
-        .to(bgDestacados3,0.3,{autoAlpha:0})
+        .to(bgDestacados2,0.3,{autoAlpha:0},'-=0.5')
+        .to(bgDestacados3,0.3,{autoAlpha:0},'-=0.5')
         .from(bgDestacados1H2,1,{autoAlpha:0, x:100})
         .from(bgDestacados1P,0.8,{autoAlpha:0, x:-100})
+        .from(bgDestacados1A,0.5,{autoAlpha:0},'-=0.6')
     });
     iconDestacado2.addEventListener('click',()=>{
         var tlmIconDestacados2 = new TimelineMax();
         tlmIconDestacados2.to(bgDestacados2,0.5,{autoAlpha:1})
-        .to(bgDestacados1,0.3,{autoAlpha:0})
-        .to(bgDestacados3,0.3,{autoAlpha:0})
+        .to(bgDestacados1,0.3,{autoAlpha:0},'-=0.5')
+        .to(bgDestacados3,0.3,{autoAlpha:0},'-=0.5')
         .from(bgDestacados2H2,1,{autoAlpha:0, x:100})
         .from(bgDestacados2P,0.8,{autoAlpha:0, x:-100})
+        .from(bgDestacados2A,0.5,{autoAlpha:0},'-=0.6')
     });
     iconDestacado3.addEventListener('click',()=>{
         var tlmIconDestacados3 = new TimelineMax();
         tlmIconDestacados3.to(bgDestacados3,0.5,{autoAlpha:1})
-        .to(bgDestacados1,0.3,{autoAlpha:0})
-        .to(bgDestacados2,0.3,{autoAlpha:0})
+        .to(bgDestacados1,0.3,{autoAlpha:0},'-=0.5')
+        .to(bgDestacados2,0.3,{autoAlpha:0},'-=0.5')
         .from(bgDestacados3H2,1,{autoAlpha:0, x:100})
         .from(bgDestacados3P,0.8,{autoAlpha:0, x:-100})
+        .from(bgDestacados3A,0.5,{autoAlpha:0},'-=0.6')
     });
     // INICIALIZANDO EL SCROLL SMOOTH
     var scroll = new SmoothScroll('a[href*="#"]', {
