@@ -535,6 +535,45 @@ footer{
     background-color: #21386E;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+footer h2{
+    font-weight: bold; 
+}
+footer .wrapper-footer .row{
+    margin: 30px 0;
+}
+footer .wrapper-footer .row div{
+color: white;
+}
+footer .wrapper-footer .row.contactenos div{
+    border-right: 1px white solid;
+    border-bottom: 1px white solid;
+}
+footer .wrapper-footer .row div{
+text-align: center;
+}
+
+footer .wrapper-footer .row div ul{
+list-style: none;
+}
+/* footer .wrapper-footer .row div ul{
+margin: 0 0 0 25%;
+} */
+footer .wrapper-footer .row div ul i{
+margin: 0 3% 0 0;
+}
+footer .wrapper-footer .row .quienes-somos{
+}
+footer .wrapper-footer .row .quienes-somos .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-copyright{
+    border-top: 1px white solid;
+    color:white;
 }
 .ws{
     position: fixed;
@@ -777,28 +816,60 @@ footer{
 
 <footer>
 <div class="wrapper-footer">
-    <div class="col-sm-12 col-md-6 col-lg-4">
-        <ul>
-            <li><a href="https://goo.gl/maps/m6FL3J3prESUndsb9" target="_blank">Ubicacion</a></li>
-            <li><a href="tel:+59161329432">Clicka para llamar Celular</a></li>
-            <li><a href="tel:+59133447996">Clicka para llamar a fijo</a></li>
-        </ul>
+    <div class="row contactenos">
+        <div class="col-sm-12 col-md-6 col-lg-4 quienes-somos">
+            <h2>Aqua Garden</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis soluta totam neque architecto velit ab illo fugit. Provident enim explicabo nam accusantium! Numquam itaque corrupti doloremque, totam tempora quisquam ipsa!</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <h2>Contactenos</h2>
+            <ul>
+                    <!-- <i class="fas fa-mobile-alt fa-2x"></i> 
+                    <i class="fas fa-phone fa-2x"></i>
+                    <i class="fas fa-envelope fa-2x"></i> -->
+                <li>Email: <a href="mailto:jvasquez@gmail.com">aquagarden@.gmail.com</a></li>
+                <li>Celular: </i><a href="tel:+59161329432">+59161329432</a></li>
+                <li>Telefono: <a href="tel:+59133447996">+59133447996</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <h2>Dirección</h2>
+            <ul>
+                <li><i class="fas fa-map-marked-alt fa-2x"></i>2do anillo esquina guapuru, al frente del edificio Costa Azul<a href="https://goo.gl/maps/m6FL3J3prESUndsb9" target="_blank">Ver en mapa</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-        <ul>
-            <li><a href="mailto:jvasquez@gmail.com">Clicka para enviar email a un destinatario</a>
-            </li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
+    <div class="row redes-sociales">
+        <!-- <div class="col-sm-12 col-md-6">
+            <h2>Siguenos en nuestras redes sociales</h2>
+        </div> -->
+        <div class="col-sm-12 text-center">
+            <!-- Facebook -->
+            <a class="fb-ic">
+                <i class="fab fa-facebook-f fa-2x white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+                <i class="fab fa-twitter fa-2x white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+                <i class="fab fa-google-plus-g fa-2x white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+                <i class="fab fa-linkedin-in fa-2x white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+                <i class="fab fa-instagram fa-2x white-text"> </i>
+            </a>
+        </div>
     </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright: itSolution. Todos los derechos reservados.
+        </div>
+        <!-- Copyright -->
 </div>
 </footer>
 
