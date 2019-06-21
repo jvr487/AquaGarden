@@ -19,10 +19,6 @@
         padding: 0;
     }
 
-    .recuadro{
-        background-color: black;
-        opacity: .5;
-    }
     body::-webkit-scrollbar{
         width: 15px;
     }
@@ -468,9 +464,9 @@ background-size: cover;
         bottom: -68px;
         left: 0;
         right: 0;
+        margin: 0 auto;
         height: 68px;
         width: 100%;
-        margin: 0 auto;
         background:url('images/down-gradient.png') no-repeat center;
     }
     .section-representantes a{
@@ -524,26 +520,64 @@ background-size: cover;
     background-size: cover;
     overflow:hidden; 
 }
-
+.section-proyectos .content-h2{
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 80; */
+    text-align: center;
+}
 .section-proyectos h2.bg{
-    color: white;
+    /* color: white;
     font-size: 25vw;
     font-weight: bold;
+    opacity: 0.3; */
+    color: white;
+    font-size: 20vw;
+    font-weight: bold;
     opacity: 0.3;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,50%);
-    z-index: 80;
+    /* width: 89%; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* margin: 0 auto; */
+    /* z-index: 80; */
 }
 .section-proyectos .proyectos h2{
     color: white;
-    font-size: 2.3rem;
+    /* font-size: 2.3rem; */
     font-weight: bold;
-    text-align: center;
+    text-align: center;    
+    margin-bottom: 260px;
+    font-size: 8vw;
 } 
 .section-proyectos .proyectos{
     position: relative;
     z-index: 90;
+    margin-top: -6%;
+}
+.section-proyectos .proyectos .descripcion{
+    margin-bottom: 50px;
+    position: relative;
+}
+.section-proyectos .proyectos .recuadro{
+    background-color: black;
+    opacity: .4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 85;
+}
+.section-proyectos .proyectos p{
+    color: white;
+    position: relative;
+    z-index: 86;
+    font-size: 25px;
 }
 .section-proyectos .proyectos .btn-agua-garden{
     text-align: right;
@@ -877,19 +911,27 @@ footer .footer-copyright{
 </section>
 
 <section class="section-proyectos">
-    <h2 class="bg">PASIÓN</h2>
-    <!-- <div class="row">
+    <div class="content-h2">
+        <h2 class="bg">PASIÓN</h2>
+    </div>
+    <div class="overlay"></div>
+     <div class="row">
         <div class="col">
             <div class="proyectos">
                 <h2>NUESTROS PROYECTOS</h2>
-                <div class="recuadro">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aliquam, iure fugit maiores dolore cupiditate aperiam ad ea expedita voluptates corrupti perferendis laborum excepturi. Earum repellendus nihil recusandae doloremque quasi.</p>
-                </div>                
-                <a class="btn-agua-garden" href="">Conoce más de nuestros proyectos</a>
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-8">
+                        <div class="descripcion">
+                            <div class="recuadro"></div>
+                            <p>Siempre buscaremos una forma de romper los límites y hacer realidad tus proyectos. Esto lo hacemos mezclando diseño, ingeniería, arquitectura, productos de la mejor calidad, servicio y soporte responsable.</p>             
+                        </div>
+                        <a class="btn-agua-garden" href="">Conoce más de nuestros proyectos</a>  
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
-    <div class="overlay"></div>
+    </div>
 </section>
 <section class="section-endless">
     <div class="overlay"></div>
@@ -898,7 +940,7 @@ footer .footer-copyright{
 
     <a class="btn-agua-garden" href="">Conoce más de nuestros proyectos</a>
 </section> -->
-
+ 
 <footer>
 <div class="wrapper-footer">
     <div class="ola">
