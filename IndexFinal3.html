@@ -41,6 +41,8 @@
     overflow: hidden !important;
     color: white !important;
     display: inline-block;
+    font-weight: bold;
+    border-radius: 10px;
     }
     .btn-agua-garden:before{
     content: "" !important;
@@ -53,6 +55,7 @@
     overflow: hidden !important;
     bottom: 0 !important;
     border-radius: 50% 50% 0 0 !important;
+    height: 180% !important;
     transition: 0.8s!important;
     }
     .btn-agua-garden:hover{
@@ -286,7 +289,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background:rgba(0, 0, 0, 0.4);
+    background:rgba(0, 0, 0, 0.2);
     z-index: 80;
     width: 100%;
     height: 100%;
@@ -514,7 +517,7 @@ background-size: cover;
 .section-proyectos{
     position: relative;
     width: 100%;
-    min-height: 700px;
+    min-height: 800px;
     background-color: #3498db;
     background:url('images/proyectos.jpg') no-repeat center;
     background-size: cover;
@@ -529,6 +532,7 @@ background-size: cover;
     margin: auto;
     z-index: 80; */
     text-align: center;
+    padding-top: 50px;
 }
 .section-proyectos h2.bg{
     /* color: white;
@@ -539,6 +543,10 @@ background-size: cover;
     font-size: 20vw;
     font-weight: bold;
     opacity: 0.3;
+    font-style: italic;
+    text-shadow: 0px 0px 18px rgba(0, 0, 0, 0.85);
+    /* font-family: 'gotham_medium'; */
+    letter-spacing: 15px;
     /* width: 89%; */
     /* position: absolute; */
     /* top: 0; */
@@ -548,22 +556,28 @@ background-size: cover;
     /* margin: 0 auto; */
     /* z-index: 80; */
 }
-.section-proyectos .proyectos h2{
-    color: white;
-    /* font-size: 2.3rem; */
-    font-weight: bold;
-    text-align: center;    
-    margin-bottom: 260px;
-    font-size: 8vw;
-} 
+ 
 .section-proyectos .proyectos{
     position: relative;
     z-index: 80;
     margin-top: -6%;
 }
+
+.section-proyectos .proyectos h2{
+    color: white;
+    /* font-size: 2.3rem; */
+    font-weight: bold;
+    text-align: center;    
+    margin-bottom: 100px;
+    font-size: 8vw;
+    text-shadow: 13px 9px 18px rgba(0, 0, 0, 0.85);
+    font-size: calc(9vh + 2vw - 15px);
+    margin-top: 10px;
+}
 .section-proyectos .proyectos .descripcion{
     position: relative;
     margin: 10px;
+    max-width: 700px;
 }
 .section-proyectos .proyectos .recuadro{
     background-color: black;
@@ -577,8 +591,11 @@ background-size: cover;
     color: white;
     position: relative;
     z-index: 86;
-    font-size: 25px;
+    /* font-size: 25px; */
     padding: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: calc(3vh + 1vw - 4px);
 }
 .section-proyectos .proyectos .btn-agua-garden{
     text-align: right;
@@ -797,7 +814,8 @@ footer .footer-copyright{
             <div class="animated fadeInDown">
                 <h3 class="h3-responsive">SPA HIGHLIFE</h3>
                 <p>Desconéctate y vive tu tranquilidad como te lo mereces.</p>
-                <button class="btn-agua-garden">Ver más</button>
+                <!-- <button class="btn-agua-garden">Ver más</button> -->
+                <a class="btn-agua-garden" href="">Ver más</a>
             </div>
           </div>
           <!--Caption-->
@@ -809,7 +827,8 @@ footer .footer-copyright{
           <!--Caption-->
           <div class="carousel-caption">
             <div class="animated fadeInDown">
-              <button class="btn-agua-garden">Lorem, ipsum dolor.</button>
+              <!-- <button class="btn-agua-garden">Ver más</button> -->
+              <a class="btn-agua-garden" href="">Ver más</a>
               <h3 class="h3-responsive">Lorem, ipsum dolor sit amet.</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
             </div>
@@ -823,7 +842,8 @@ footer .footer-copyright{
           <!--Caption-->
           <div class="carousel-caption">
             <div class="animated fadeInDown">
-              <button class="btn-agua-garden">Lorem, ipsum dolor.</button>
+              <!-- <button class="btn-agua-garden">Ver más</button> -->
+              <a class="btn-agua-garden" href="">Ver más</a>
               <h3 class="h3-responsive">Lorem, ipsum dolor sit amet.</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
             </div>
@@ -913,14 +933,26 @@ footer .footer-copyright{
 
 <section class="section-proyectos">
     <div class="content-h2">
-        <h2 class="bg">PASIÓN</h2>
+        <h2 class="bg">Pasión</h2>
     </div>
     <div class="overlay"></div>
      <div class="row">
         <div class="col">
             <div class="proyectos">
                 <h2>NUESTROS PROYECTOS</h2>
+                
                 <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="descripcion">
+                                <div class="recuadro"></div>
+                                <p>Siempre buscaremos una forma de romper los límites y hacer realidad tus proyectos. <br> Esto lo hacemos mezclando diseño, ingeniería, arquitectura, productos de la mejor calidad, servicio y soporte responsable.</p>             
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                <!-- <div class="row">
                     <div class="col-lg-4"></div>
                     <div class="col-lg-8">
                         <div class="descripcion">
@@ -928,17 +960,17 @@ footer .footer-copyright{
                             <p>Siempre buscaremos una forma de romper los límites y hacer realidad tus proyectos. Esto lo hacemos mezclando diseño, ingeniería, arquitectura, productos de la mejor calidad, servicio y soporte responsable.</p>             
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
-                    <div class="col-lg-4"></div>
-                    <div class="col-lg-4"></div>
-                    <div class="col-lg-4 text-center">
-                        <a class="btn-agua-garden" href="">Conoce más aquí</a>  
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-5 text-center text-md-right">
+                        <a class="btn-agua-garden" href="">Conoce más aquí</a> 
                     </div>
+                    <div class="col-sm-2"></div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 </section>
 <section class="section-endless">
     <div class="overlay"></div>
