@@ -604,10 +604,36 @@ background-size: cover;
 .section-endless{
     position: relative;
     width: 100%;
-    min-height: 700px;
+    min-height: 800px;
     background-color: #3498db;
     background:url('images/bg-section-endless.jpg') no-repeat center;
     background-size: cover;
+    overflow: hidden;
+}
+.section-endless h2{
+    color: white;
+    /* font-size: 2.3rem; */
+    font-weight: bold;
+    /* text-align: center;     */
+    margin-bottom: 100px;
+    /* font-size: 8vw; */
+    text-shadow: 13px 9px 18px rgba(0, 0, 0, 0.85);
+    font-size: calc(9vh + 2vw - 15px);
+    margin-top: 10px;
+}
+.section-endless .descripcion{
+    position: absolute;
+    bottom: 2%;
+    margin: 0 10%;
+}
+.section-endless .descripcion p{
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+    /* font-size: 30px; */
+    /* font-family: sans-serif; */
+    /* font-weight: bold; */
+    font-size: calc(3vh + 1vw - 4px);
 }
 /* section-clientes */
 .section-clientes{
@@ -972,8 +998,29 @@ footer .footer-copyright{
         </div>
     </div>    
 </section>
+
 <section class="section-endless">
     <div class="overlay"></div>
+    <div class="row">
+        <div class="col">
+            <h2 class="text-left">ENDLESS POOL</h2>
+        </div>
+    </div>
+    <div class="descripcion">
+        <div class="row">
+            <div >
+                <div class="col">
+                    <p>Los equipos Enless Pools® son los únicos en el mundo que permiten ejercitarse como todo un profesional en las comodidades del hogar. Con el Sistema Fitness, usted podrá nadar, correr, hacer ejercicio y relajarse... todo en un solo lugar.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right">
+                <a class="btn-agua-garden" href="">Conoce más aquí</a>
+            </div>
+        </div>
+    </div>
+    
 </section>
 <!-- <section class="section-clientes">
 
