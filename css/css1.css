@@ -1,0 +1,815 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4fafff 47%, #465fca 100%);
+  border-radius: 6px;
+  border: 2px white solid;
+}
+
+.btn-agua-garden {
+  border: 1px solid #3498db !important;
+  background: none !important;
+  padding: 10px 20px !important;
+  font-size: 20px !important;
+  font-family: "montserrat" !important;
+  cursor: pointer !important;
+  margin: 10px !important;
+  transition: 0.8s !important;
+  position: relative !important;
+  overflow: hidden !important;
+  color: white !important;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.btn-agua-garden:before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 0% !important;
+  background: linear-gradient(to right, #44a9cf 47%, #465fca 100%) !important;
+  z-index: -1 !important;
+  overflow: hidden !important;
+  bottom: 0 !important;
+  border-radius: 50% 50% 0 0 !important;
+  height: 180% !important;
+  transition: 0.8s !important;
+}
+.btn-agua-garden:hover {
+  color: #fff;
+  overflow: hidden !important;
+}
+.btn-agua-garden:hover:before {
+  overflow: hidden !important;
+  height: 180% !important;
+}
+
+/* .section-navbar{
+        width: 100%;
+        height: 80px;
+        background:whitesmoke;
+    } */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  z-index: 90;
+  transition: 0.5s;
+}
+.navbar .logo {
+  width: 90%;
+  display: flex;
+  margin-left: 2%;
+}
+.navbar .logo,
+.navbar .logo a {
+  flex-direction: row;
+  align-items: center;
+  color: white;
+}
+.navbar .logo h2 {
+  margin: 0 0 0 2%;
+  font-weight: bold;
+  color: white;
+}
+.navbar-menu-movil {
+  position: absolute;
+  background: #2c2c2c;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 100%;
+  top: 0;
+  left: 101%;
+  /* transform-origin:left; */
+  /* transform:perspective(1100px) rotateY(90deg); */
+  opacity: 0;
+  /* display: none; */
+  transition: all 1.3s ease-in-out;
+  z-index: 100;
+}
+.navbar-menu-movil.active {
+  /* display: block; */
+  opacity: 1;
+  left: 0;
+  /* display: block; */
+  /* transform:perspective(1100px) rotateY(0deg); */
+}
+.navbar-menu-movil .logo-menu-movil {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.navbar-menu-movil .logo-menu-movil a {
+  color: white;
+}
+.navbar-menu-movil .logo-menu-movil h2 {
+  margin: 0 0 0 30px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ffffff82;
+  background-image: url("../images/water.png");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: water 15s infinite linear;
+}
+.navbar-menu-movil ul li {
+  /* margin-top: 15px; */
+  border-bottom: 1px solid #353535;
+  padding: 12px 52px;
+  text-align: center;
+}
+.navbar-menu-movil ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  display: none;
+}
+.navbar-menu-movil ul li a:hover {
+  font-size: 4rem;
+}
+.navbar-menu-movil ul li:first-child a:hover:before {
+  background: url("../images/swimming-pool-830505_1280.jpg") no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  transition: 1.3s;
+  display: block;
+  animation: fade-in 1.3s ease-in-out;
+}
+.navbar-menu-movil ul li:nth-child(2) a:hover:before {
+  background: url("../images/proyectos.jpg") no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  transition: 1.3;
+  display: block;
+  animation: fade-in 1.3s ease-in-out;
+}
+.navbar-menu-movil ul li:nth-child(3) a:hover:before {
+  background: url("../images/pag-spa.png") no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  transition: 1.3s;
+  display: block;
+  animation: fade-in 1.3s ease-in-out;
+}
+.navbar-menu-movil ul li:nth-child(4) a:hover:before {
+  background: url("../images/pag-endless-pool.jpg") no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  transition: 1.3s;
+  display: block;
+  animation: fade-in 1.3s ease-in-out;
+}
+.navbar-menu-movil ul li:nth-child(5) a:hover:before {
+  background: url("../images/pag-wellness.jpg") no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  transition: 1.3s;
+  display: block;
+  animation: fade-in 1.3s ease-in-out;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0.1;
+    top: -80px;
+  }
+  100% {
+    opacity: 0.3;
+    top: 0;
+  }
+}
+.navbar-menu-movil ul li a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar.scrolling {
+  background: rgba(53, 57, 69, 0.85);
+}
+.hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 27px;
+  margin-right: 1.5%;
+  cursor: pointer;
+  z-index: 150;
+  transition: left 200ms linear 0ms, transform 300ms ease 100ms;
+}
+.hamburger span {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background: #fff;
+  display: block;
+  transition: transform 300ms ease;
+}
+.hamburger.active span:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  top: -10px;
+  transform: rotate(-45deg);
+}
+/* Carousell */
+
+.carousel-item.carousel-header {
+  height: 100vh; /*  87vh;*/
+  min-height: 300px;
+  width: 100%;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+.carousel-item.carousel-header.carousel-background-1 {
+  background-image: url("../images/spa.png");
+  /*background-image: url('images/portada1.jpeg');*/
+}
+.carousel-item.carousel-header.carousel-background-2 {
+  background-image: url("../images/portadacool.jpg");
+}
+.carousel-item.carousel-header div.carousel-background-3 {
+  background-image: url("../images/diviertete.jpg");
+  height: 100vh; /*  87vh;*/
+  min-height: 300px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1) translateZ(0);
+  animation: grow 12s linear 10ms forwards;
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 80;
+  width: 100%;
+  height: 100%;
+}
+.overlay-ligth {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 47%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 80;
+  width: 100%;
+  height: 100%;
+}
+.overlay-ligth div {
+  color: white;
+  font-size: x-large;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  margin-left: 32%;
+  align-items: flex-end;
+}
+.carousel-inner .carousel-item .carousel-caption {
+  z-index: 90;
+}
+.carousel-inner .carousel-item .carousel-caption h3 {
+  font-weight: 600;
+}
+.carousel-inner .carousel-item div button {
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 3px;
+  /* background: transparent; */
+  transition: 3s;
+}
+.carousel-inner .carousel-item div button:hover {
+  background: linear-gradient(to right, #44a9cf 47%, #465fca 100%);
+}
+/* Section Destacados*/
+.section-destacados {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #44a9cf;
+  overflow: hidden;
+}
+.section-destacados ul {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  list-style: none;
+  z-index: 85;
+}
+.section-destacados ul li {
+  margin: 15px;
+  text-align: center;
+}
+.section-destacados ul li a {
+  text-decoration: none;
+  color: white;
+}
+.section-destacados .contenedor-bg-descatados {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.section-destacados .contenedor-bg-descatados .bg-destacados {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.section-destacados .contenedor-bg-descatados .bg-destacados h2 {
+  color: white;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+.section-destacados .contenedor-bg-descatados .bg-destacados p {
+  color: white;
+  font-weight: 300;
+}
+.section-destacados .contenedor-bg-descatados .bg-destacados:nth-child(1) {
+  background: url("../images/acogedor-agua-arboles-9422.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.section-destacados .contenedor-bg-descatados .bg-destacados:nth-child(2) {
+  background: url("../images/agua-agua-azul-arquitectura-261102.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.section-destacados .contenedor-bg-descatados .bg-destacados:nth-child(3) {
+  background: url("../images/agua-arquitectura-centro-turistico-261327.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.section-destacados .contenedor-bg-descatados .bg-destacados .contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 85;
+}
+
+#tab-destacados {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* justify-content: space-around; */
+  background-color: rgba(53, 57, 69, 1);
+  overflow-x: auto;
+  overflow-y: auto;
+  z-index: 85;
+}
+#tab-destacados li {
+  flex-direction: row;
+  flex-grow: 1;
+  text-align: center;
+  width: 33.33%;
+  height: 100%;
+}
+#tab-destacados li a {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tab-destacados li a.active {
+  background-color: transparent;
+}
+#tab-content {
+  height: 100vh;
+  width: 100%;
+}
+#tab-content div .img {
+  height: 100vh;
+  width: 100%;
+  background: url("../images/portada1.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+/* Section Destacados*/
+
+/* section-representantes */
+.section-representantes {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  /* -webkit-clip-path: polygon(100% 0, 100% 90%, 48% 100%, 55% 90%, 0 97%, 0 0);
+        clip-path: polygon(100% 0, 100% 90%, 48% 100%, 55% 90%, 0 97%, 0 0); */
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  /* background: url('images/bg-section.jpg') */
+}
+.section-representantes:after {
+  content: "";
+  position: absolute;
+  bottom: -68px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 68px;
+  width: 100%;
+  background: url("../images/down-gradient.png") no-repeat center;
+}
+.section-representantes a {
+  position: absolute;
+  bottom: -50px;
+  color: white;
+  z-index: 80;
+}
+.section-representantes h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+/* section-representantes */
+
+/* section-productos */
+.section-productos {
+  /* height: 84vh; */
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-productos .representantes {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  justify-content: center;
+}
+.section-productos .representantes div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 40px;
+}
+/* section-productos */
+
+/* section-proyectos */
+.section-proyectos {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  background-color: #3498db;
+  background: url("../images/proyectos.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.section-proyectos .content-h2 {
+  /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 80; */
+  text-align: center;
+  padding-top: 50px;
+}
+.section-proyectos h2.bg {
+  /* color: white;
+    font-size: 25vw;
+    font-weight: bold;
+    opacity: 0.3; */
+  color: white;
+  font-size: 20vw;
+  font-weight: bold;
+  opacity: 0.3;
+  font-style: italic;
+  text-shadow: 0px 0px 18px rgba(0, 0, 0, 0.85);
+  /* font-family: 'gotham_medium'; */
+  letter-spacing: 15px;
+  /* width: 89%; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  /* margin: 0 auto; */
+  /* z-index: 80; */
+}
+
+.section-proyectos .proyectos {
+  position: relative;
+  z-index: 80;
+  margin-top: -6%;
+}
+
+.section-proyectos .proyectos h2 {
+  color: white;
+  /* font-size: 2.3rem; */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 8vw;
+  text-shadow: 13px 9px 18px rgba(0, 0, 0, 0.85);
+  font-size: calc(9vh + 2vw - 15px);
+  margin-top: 10px;
+}
+.section-proyectos .proyectos .descripcion {
+  position: relative;
+  margin: 10px;
+  max-width: 700px;
+}
+.section-proyectos .proyectos .recuadro {
+  background-color: black;
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 85;
+}
+.section-proyectos .proyectos p {
+  color: white;
+  position: relative;
+  z-index: 86;
+  /* font-size: 25px; */
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: calc(3vh + 1vw - 4px);
+}
+.section-proyectos .proyectos .btn-agua-garden {
+  text-align: right;
+}
+/* section-proyectos */
+.section-endless {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  background-color: #3498db;
+  background: url("../images/bg-section-endless.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.section-endless h2 {
+  color: white;
+  /* font-size: 2.3rem; */
+  font-weight: bold;
+  /* text-align: center;     */
+  margin-bottom: 100px;
+  /* font-size: 8vw; */
+  text-shadow: 13px 9px 18px rgba(0, 0, 0, 0.85);
+  font-size: calc(9vh + 2vw - 15px);
+  margin-top: 10px;
+}
+.section-endless .descripcion {
+  position: absolute;
+  bottom: 2%;
+  margin: 0 10%;
+  z-index: 85;
+}
+.section-endless .descripcion p {
+  border: 2px solid white;
+  color: white;
+  padding: 10px;
+  /* font-size: 30px; */
+  /* font-family: sans-serif; */
+  /* font-weight: bold; */
+  font-size: calc(3vh + 1vw - 4px);
+}
+/* section-clientes */
+.section-clientes {
+  width: 100%;
+  height: 100vh;
+  background-color: lightslategray;
+  -webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+}
+/* section-clientes */
+
+/* section ws*/
+footer {
+  background-color: #21386e;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* border:1px white solid; */
+}
+footer h2 {
+  position: relative;
+  font-weight: bold;
+}
+footer h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+  padding-right: 50%;
+  border-bottom: 2px white solid;
+}
+footer .wrapper-footer .ola {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+}
+footer .wrapper-footer .ola svg {
+  width: 100%;
+  height: 30px;
+}
+footer .wrapper-footer .ola svg path {
+  /* width: 100%;
+    height: 50%; */
+  stroke-width: 6px;
+  fill: #21386e;
+  stroke: #21386e;
+}
+footer .wrapper-footer .row {
+  margin: 30px 0;
+}
+footer .wrapper-footer .row div {
+  color: white;
+}
+footer .wrapper-footer .row.contactenos div {
+  border-bottom: 1px white solid;
+  margin-top: 12px;
+}
+/* footer .wrapper-footer .row.contactenos div:nth-child(1),
+footer .wrapper-footer .row.contactenos div:nth-child(2){
+    border-right: 1px white solid;
+} */
+footer .wrapper-footer .row div {
+  text-align: center;
+}
+
+footer .wrapper-footer .row div ul {
+  list-style: none;
+}
+/* footer .wrapper-footer .row div ul{
+margin: 0 0 0 25%;
+} */
+footer .wrapper-footer .row div ul i {
+  margin: 0 3% 0 0;
+}
+footer .wrapper-footer .row .quienes-somos {
+}
+footer .wrapper-footer .row .quienes-somos .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-copyright {
+  border-top: 1px white solid;
+  color: white;
+}
+.ws {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 90;
+}
+.ws .container-ws a img {
+  animation: pulse_animation 3s ease-out;
+  animation-iteration-count: infinite;
+  border-radius: 30%;
+}
+
+/* section ws*/
+
+@keyframes water {
+  from {
+    background-position: left 0 top 0;
+  }
+  to {
+    background-position: right 1370px top 0;
+  }
+}
+@keyframes pulse_animation {
+  /* 0% {
+    transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    } */
+  0% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0.6), 0 0 0 0 rgba(29, 171, 209, 0.6);
+  }
+  30% {
+    box-shadow: 0 0 0 50px rgba(29, 171, 209, 0),
+      0 0 0 0 rgba(29, 171, 209, 0.6);
+  }
+  65% {
+    box-shadow: 0 0 0 50px rgba(29, 171, 209, 0),
+      0 0 0 30px rgba(29, 171, 209, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(29, 171, 209, 0), 0 0 0 30px rgba(29, 171, 209, 0);
+  }
+}
+
+/* PAGE SPA */
+.header-spa{
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    background-color: #3498db;
+    background: url("../images/pag-spa.png") no-repeat center;
+    background-size: cover;
+    overflow: hidden; 
+}
+.hero-text{
+    position: relative;
+    top: 70vh;
+    z-index: 85;
+}
+.hero-text h2 {
+    color: white;
+    font-weight: bold;
+    text-shadow: 13px 9px 18px rgba(0, 0, 0, 0.85);
+    font-size: calc(9vh + 2vw - 15px);
+    margin-top: 10px;
+  }
+  .hero-text .descripcion {
+    position: relative;
+    bottom: 15%;
+    margin: 0 10%;
+  }
+  .hero-text .descripcion p {
+    color: white;
+    font-size: calc(2.5vh + 1vw - 4px);
+  }
+  /**/
+  .header-endless-pool{
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    background-color: #3498db;
+    background: url("../images/pag-endless-pool3.jpg") no-repeat center;
+    background-size: cover;
+    overflow: hidden; 
+}
+  /**/
+  .header-welless-pool{
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    background-color: #3498db;
+    background: url("../images/pag-wellness.jpg") no-repeat center;
+    background-size: cover;
+    overflow: hidden; 
+}

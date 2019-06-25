@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aqua Graden</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/css1.css" />
+  </head>
+
+  <body>
+    <section class="ws">
+      <div class="container-ws">
+        <a
+          href="https://wa.me/59161329432?text=Me%20gustaría%20saber%20el%20precio%20del%20spa%20Hotsprint"
+          target="_blank"
+        >
+          <img src="images/ws.png" alt="whatsapp" width="50" />
+        </a>
+      </div>
+    </section>
+    <section class="section-navbar">
+      <div class="navbar">
+        <div class="logo">
+          <a href="" class="">
+            <i class="fas fa-swimmer fa-4x"></i>
+          </a>
+          <h2>Aqua Garden</h2>
+        </div>
+        <div class="hamburger" onclick="toggleHamburger(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="navbar-menu-movil" class="navbar-menu-movil">
+          <div class="logo-menu-movil">
+            <a href="" class="">
+              <i class="fas fa-swimmer fa-4x"></i>
+            </a>
+            <h2>Aqua Garden</h2>
+          </div>
+          <ul class="menu-movil">
+            <li><a href="IndexFinal3.html">Inicio</a></li>
+            <li><a href="">Acerca de</a></li>
+            <li><a href="spa.html">Spa</a></li>
+            <li><a href="endless-pool.html">Endless Pool</a></li>
+            <li><a href="wellness-pool.html">Welless Pool</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <header class="header-spa">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center">DISFRUTA</h2>
+            <div class="descripcion">
+              <p class="text-center">
+                nuevas experiencias con tus seres queridos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+
+    <!-- Get patch fixes within a minor version -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- animaciones -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+    <script>
+      $(window).on("scroll", function() {
+        if ($(window).scrollTop() > 167) {
+          $(".navbar").addClass("scrolling");
+        } else {
+          $(".navbar").removeClass("scrolling");
+        }
+      });
+
+      function toggleHamburger(ref) {
+        ref.classList.toggle("active");
+        document.getElementById("navbar-menu-movil").classList.toggle("active");
+      }
+
+      // INICIALIZANDO EL SCROLL SMOOTH
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        //   offset: 84,
+        speed: 1000
+      });
+    </script>
+  </body>
+</html>
