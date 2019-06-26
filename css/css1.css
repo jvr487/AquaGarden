@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+.navbar{
+  box-shadow: none;
+}
 body::-webkit-scrollbar {
   width: 15px;
 }
@@ -154,50 +156,50 @@ body::-webkit-scrollbar-thumb {
   background: url("../images/swimming-pool-830505_1280.jpg") no-repeat;
   background-size: cover;
   opacity: 0.3;
-  transition: 1.3s;
+  transition: 1s;
   display: block;
-  animation: fade-in 1.3s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 .navbar-menu-movil ul li:nth-child(2) a:hover:before {
   background: url("../images/proyectos.jpg") no-repeat;
   background-size: cover;
   opacity: 0.3;
-  transition: 1.3;
+  transition: 1s;
   display: block;
-  animation: fade-in 1.3s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 .navbar-menu-movil ul li:nth-child(3) a:hover:before {
   background: url("../images/pag-spa.png") no-repeat;
   background-size: cover;
   opacity: 0.3;
-  transition: 1.3s;
+  transition: 1s;
   display: block;
-  animation: fade-in 1.3s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 .navbar-menu-movil ul li:nth-child(4) a:hover:before {
   background: url("../images/pag-endless-pool.jpg") no-repeat;
   background-size: cover;
   opacity: 0.3;
-  transition: 1.3s;
+  transition: 1s;
   display: block;
-  animation: fade-in 1.3s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 .navbar-menu-movil ul li:nth-child(5) a:hover:before {
   background: url("../images/pag-wellness.jpg") no-repeat;
   background-size: cover;
   opacity: 0.3;
-  transition: 1.3s;
+  transition: 1s;
   display: block;
-  animation: fade-in 1.3s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 @keyframes fade-in {
   0% {
     opacity: 0.1;
-    top: -80px;
+    /* top: -10px; */
   }
   100% {
     opacity: 0.3;
-    top: 0;
+    /* top: 0; */
   }
 }
 .navbar-menu-movil ul li a {
@@ -269,10 +271,16 @@ body::-webkit-scrollbar-thumb {
 }
 @keyframes grow {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
   }
   100% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
 }
 .overlay {
